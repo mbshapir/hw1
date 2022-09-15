@@ -1,6 +1,5 @@
 #include "split.h"
 #include <iostream>
-using namespace std;
 
 int main(){
 
@@ -21,18 +20,18 @@ Node* evens = NULL;
 
 split(start, odds, evens);
 
-while(odds != NULL){
-	cout << odds->value << endl;
+while(odds != NULL){ //print out odds
+	std::cout << odds->value << endl;
 	odds = odds->next;
 }
 
-while(evens != NULL){
-	cout << evens->value << endl;
+while(evens != NULL){ //print out evens
+	std::cout << evens->value << endl;
 	evens = evens->next;
 }
 
-delete end;
-delete secondlast;
+delete end; //deleter nodes for memory allocation sake
+delete secondlast; //must go end to front so we have a path to follow
 delete thirdlast; 
 delete fourthlast;
 delete fifthlast;
